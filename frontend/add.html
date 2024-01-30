@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <meta name="autor" content="Sooma">
+        <meta name="copyright" content="Created by Sooma">
+        <meta name="description" content="Añadir objeto perdido">
+        <meta name="keywords" content="añadir, objeto, perdido">
+        <meta name="theme-color" content="#111">
+        <!-- Open Graph protocol -->
+        <meta property="og:title" content="Agregar objeto">
+        <meta property="og:description" content="Añadir objeto perdido">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://lostitcm/origin/multimedia/img/...">
+        <meta property="og:url" content="https://lostitcm.com/add.html">
+        <!-- Link tags -->
+        <link rel="stylesheet" type="text/css" href="origin/css/styles.css">
+        <link rel="canonical" href="https://lostitcm.com/add.html">
+        <link rel="icon" href="origin/multimedia/img/favicon.png">
+        <link rel="apple-touch-icon" href="origin/multimedia/img/favicon.png">
+        <script src="origin/js/index.js" type="module" defer></script>
+        <title>Agregar objeto</title>
+    </head>
+    <body>
+        <noscript><h2>Tú necesitas tener habilitado JavaScript en tu navegador para acceder a esta página</h2></noscript>
+        <div class="container">
+            <header class="header">
+                <div class="header-container">
+                    <a class="header-container__icon" href="./index.html">ITCM</a>
+                    <a class="header-container__a" href="home.html">Home</a>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main-container">
+                    <div class="division">
+                        <h1 class="division__h1">Agregar un objeto extraviado</h1>
+                        <form class="division__form division__form-add" autocomplete="off">
+                            <label class="division__label">Nombre del objeto extraviado:</label>
+                            <input class="division__input" type="text" name="name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo puedes ingresar letras y espacios" required>
+                            <label class="division__label">Descripción del objeto:</label>
+                            <textarea class="division__input" name="description" pattern="^[A-Za-z0-9:ÑñÁáÉéÍíÓóÚúÜü\s]+$" title="No puedes ingresar caracteres especiales" placeholder="Color: Rojo" required></textarea>
+                            <input class="division__submit" type="submit" value="Enviar">
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer-container">
+                    <p class="footer-container__p">Created by Sooma.</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

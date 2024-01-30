@@ -1,0 +1,495 @@
+/* Fluid design by Trys Mudford  */
+/*************************** Normalize ***************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+  
+body {
+    margin: 0;
+}
+  
+main {
+    display: block;
+}
+  
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+  
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+  
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+  
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+  
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+  
+b,
+strong {
+    font-weight: bolder;
+}
+  
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+  
+small {
+    font-size: 80%;
+}
+  
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+  
+sub {
+    bottom: -0.25em;
+}
+  
+sup {
+    top: -0.5em;
+}
+  
+img {
+    border-style: none;
+}
+  
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+  
+button,
+input {
+    overflow: visible;
+}
+  
+button,
+select { 
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+  
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+  
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+  
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+  
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+  
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+  
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+  
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+  
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+  
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+  
+template {
+    display: none;
+}
+  
+[hidden] {
+    display: none;
+}
+
+/*************************** Styles ***************************/
+:root {
+    --gold-color: #B38E5D;
+    --black-color: #111;
+    --white-color: #f2f2f2;
+    --dark-color-hover: #222;
+    --red-color: #800040;
+    --red-color-hover: #F80044;
+    --gray-color: #6F7271;
+    --sand-color: #D4C19C;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway.ttf);
+}
+
+html {
+    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1400 - 300)));
+}
+
+body {
+    background-color: var(--gold-color);
+}
+
+.none {
+    display: none;
+}
+
+/*************************** Hero styles ***************************/
+.hero-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container__h1 {
+    font-family: "Lato", "Tahoma";
+    font-size: 5rem;
+    text-align: center;
+}
+
+.hero-container__img-container {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 3rem;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container__img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.hero-container__p {
+    font-family: "Lato", "Tahoma";
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.hero-container__a {
+    font-family: "Lato", "Tahoma";
+    color: var(--black-color);
+    border-bottom: 1px solid var(--black-color);
+    font-weight: bold;
+}
+
+/*************************** Header styles ***************************/
+.header {
+    background-color: var(--black-color);
+    width: 100%;
+}
+
+.header-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container__icon {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border-radius: 10px;
+    padding: 0.3rem;
+    font-family: "Lato", "Tahoma";
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.header-container__a {
+    color: var(--white-color);
+    opacity: 0.8;
+    font-family: "Lato", "Tahoma";
+    transition: opacity 0.5s ease-in-out;
+}
+
+/*************************** Main styles ***************************/
+.division--height {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+    opacity: 0.6;
+    padding: 4rem;
+}
+
+.division {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.division__p {
+    color: var(--white-color);
+    text-align: center;
+    font-family: "Raleway", "Tahoma";
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.division__h1 {
+    text-align: center;
+    font-family: "Lato", "Tahoma";
+    font-size: 3rem;
+    color: var(--white-color);
+}
+
+.division__btn {
+    transition: background-color 0.5s ease-in-out,
+    border 0.5s ease-in-out;
+}
+
+.division__table {
+    border-collapse: collapse;
+}
+
+.division__th,
+.division__td {
+    border: 1px solid var(--black-color);
+    padding: 1.5rem;
+}
+
+.division__td {
+    text-align: center;
+    font-family: "Raleway", "Tahoma";
+    background-color: var(--white-color);
+}
+
+.division__th {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: "Lato", "Tahoma";
+}
+
+.division__btn,
+.division__submit {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: "Raleway", "Tahoma";
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.division__btn--delete {
+    background-color: var(--red-color);
+    margin-left: 0.5rem;
+}
+
+.division__form {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0px 0px 7px var(--white-color);
+    background-color: var(--sand-color);
+    width: 100%;
+}
+
+.division__label {
+    font-family: "Lato", "Tahoma";
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.division__input {
+    width: 40%;
+    margin-bottom: 3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--black-color);
+    outline: none;
+    padding: 0.5rem;
+    font-family: "Raleway", "Tahoma";
+}
+
+.division__alert {
+    width: 40%;
+    color: var(--white-color);
+    text-align: center;
+    margin-top: -3rem;
+    padding: 0.5rem;
+    background-color: var(--red-color-hover);
+    font-family: "Raleway", "Tahoma";
+    font-size: 0.8rem;
+    animation: validation 3s infinite ease-in-out;
+    margin-bottom: 3rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.division__submit {
+    width: 40%;
+    transition: background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+/*************************** Footer Styles ***************************/
+.footer {
+    width: 100%;
+    background-color: var(--black-color);
+}
+
+.footer-container {
+    padding: 1.5rem;
+}
+
+.footer-container__p {
+    color: var(--white-color);
+    text-align: center;
+    font-family: "Raleway", "Tahoma";
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/*************************** Pseudo classes ***************************/
+.division__btn:hover {
+    background-color: var(--dark-color-hover);
+    border: 1px solid var(--white-color);
+}
+
+.division__btn--delete:hover {
+    background-color: var(--red-color-hover);
+}
+
+.header-container__icon:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.division__submit:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: 1px solid var(--black-color);
+}
+
+.header-container__a:hover {
+    opacity: 1;
+}
+
+/*************************** Media queries ***************************/
+@media screen and (min-width: 32rem) {
+    .division--height {
+        padding: 10rem;
+    }
+
+    .division__form {
+        width: 50%;
+
+    }
+
+    .division {
+        padding: 4rem;
+    }
+}
+
+/*************************** Animations ***************************/
+@keyframes validation{
+    0% {
+        opacity: 0;
+    }50%, 75% {
+        opacity: 1;
+    }
+}
